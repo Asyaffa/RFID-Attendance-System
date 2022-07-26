@@ -4,7 +4,7 @@
 	> https://github.com/unreeeal/ESP/tree/master/ESP-RFID-GOOGLE
 */
 
-var timeZone = "Asia/Jakarta";
+var timeZone = "(Your Location Timezone)";
 var dateTimeFormat = "dd/MM/yyyy HH:mm:ss";
 var logSpreadSheetId = "(Your Log Spreadsheet ID)";
 
@@ -86,6 +86,7 @@ function doGet(e)
     addLog (uid, name, shift, jobDesc, access, location);      
   }
   
+/*
   json = 
   {
     'name': name, 
@@ -93,11 +94,13 @@ function doGet(e)
     'text': text,     
     'error': error
   }
+*/
   
   result = (access + ":" + name + ":" + text );
   return ContentService.createTextOutput(result);
   //return ContentService.createTextOutput(JSON.stringify(json) ).setMimeType(ContentService.MimeType.JSON); 
 }
+
 //Function for RFID ATTENDANCE LOGGER
 function addLog (logUid, logName, logShift, logJobDesc, logAccess, logLocation) 
 {   

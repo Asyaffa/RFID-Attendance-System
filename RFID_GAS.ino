@@ -11,7 +11,8 @@
 #include <elapsedMillis.h>
 
 #define SS_PIN D10
-#define RST_PIN D2                    
+#define RST_PIN D2  
+
 #define keypadInput A0
 
 elapsedMillis keypadReadMillis;
@@ -22,9 +23,9 @@ MFRC522 mfrc522(SS_PIN, RST_PIN);
 const char* host = "script.google.com";
 const int httpsPort = 443;
 
-const char* ssid = "UGMURO-1";
-const char* password = "Piscok2000";
-String GOOGLE_SCRIPT_ID = "AKfycbzP07tv3dmaoc-rDfSWCtVzYw99Ixc2ddQIkwRcAYQUtq5Myy97gPMC1bwYMDKgMaiU";
+const char* ssid = "(Put Your SSID)";
+const char* password = "(Put Your Password)";
+String GOOGLE_SCRIPT_ID = "(Put Your GAS Key ID)";
 
 unsigned int keypadReadInterval = 500;
 unsigned int lcdOutputInterval = 1000;
@@ -92,7 +93,6 @@ void setup()
   mfrc522.PCD_Init();
   delay(4);
   mfrc522.PCD_DumpVersionToSerial();
-  //Serial.println(F("Scan PICC to see UID, SAK, type, and data blocks..."));
 
   delay(1000);
 
@@ -125,12 +125,10 @@ void loop()
 
   if (rfidMode == true)
   {
-    // Reset the loop if no new card present on the sensor/reader. This saves the entire process when idle.
     if (!mfrc522.PICC_IsNewCardPresent())
     {
       return;
     }
-    // Verify if the NUID has been readed
     if (!mfrc522.PICC_ReadCardSerial())
     {
       return;

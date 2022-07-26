@@ -460,7 +460,7 @@ void HandleDataFromGoogle(String data)
 
   if (access == "0")
   {
-    //Kartu Tidak Terdaftar / Unregistered
+    //Unregistered UID
     lcd.clear();
     lcd.setCursor(0, 0);
     lcd.print (lcdName);
@@ -472,7 +472,7 @@ void HandleDataFromGoogle(String data)
 
   else if (access == "1")
   {
-    //Kartu Terdaftar / Registered (Asisten)
+    //Registered UID (Assistant)
     lcd.clear();
     lcd.setCursor(0, 0);
     lcd.print (lcdName);
@@ -486,7 +486,7 @@ void HandleDataFromGoogle(String data)
 
   else if (access == "2")
   {
-    //Kartu Terdaftar / Registered (Staff)
+    //Registered UID (Staff)
     lcd.clear();
     lcd.setCursor(0, 0);
     lcd.print (lcdName);
@@ -505,7 +505,7 @@ void HandleDataFromGoogle(String data)
 ================== UID Spreadsheet Google App Script Code ==================
 var timeZone = "Asia/Jakarta";
 var dateTimeFormat = "dd/MM/yyyy HH:mm:ss";
-var logSpreadSheetId = "128qggTnbogXhEn8AZ5zd7udjYLDLuNsudTCtpOY7oM0";
+var logSpreadSheetId = "(Your Log Spreadsheet ID)";
 
 //Function for RFID REGISTRY
 function doGet(e) 

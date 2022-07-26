@@ -25,7 +25,7 @@ function doGet(e)
   }
   else 
   {
-    var location = 'UGMURO';
+    var location = '(Default_Location)';	//NO SPACE
     var uid = '';
     var shift = '';
     var desc = '';

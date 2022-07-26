@@ -1,3 +1,8 @@
+/*
+    Written by Aqilla Rahman Musyaffa
+    Email: asyaffa777@gmail.com
+*/
+
 #include <SPI.h>
 #include <MFRC522.h>
 #include <ESP8266WiFi.h>

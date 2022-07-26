@@ -1,6 +1,8 @@
 /*
     Written by Aqilla Rahman Musyaffa
-    Email: asyaffa777@gmail.com
+    
+    Based on:
+    > https://github.com/unreeeal/ESP/tree/master/ESP-RFID-GOOGLE
 */
 
 #include <SPI.h>

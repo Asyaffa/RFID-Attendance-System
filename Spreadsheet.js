@@ -1,7 +1,7 @@
 /*
 	Written by Aqilla Rahman Musyaffa
-	Based on:
 	
+	Based on:
 	> https://github.com/unreeeal/ESP/tree/master/ESP-RFID-GOOGLE
 */
 
